@@ -1,0 +1,27 @@
+{
+  "name": "tute-dude",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "homepage": "https://karanjot-s.github.io/tutedude",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "vite build",
+    "deploy": "vite preview --host"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router": "^6.4.3",
+    "react-router-dom": "^6.4.3"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.8",
+    "@vitejs/plugin-react": "^2.2.0",
+    "gh-pages": "^4.0.0",
+    "vite": "^3.2.3"
+  }
+}

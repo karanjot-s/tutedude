@@ -1,0 +1,208 @@
+.friends h3 {
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 1rem;
+}
+
+.friends h3 span {
+  color: #626262;
+  font-weight: 400;
+}
+
+.code {
+  --padding-x: 1rem;
+  --letter-spacing: 0.75em;
+
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: var(--letter-spacing);
+
+  border: 1px solid rgba(0, 0, 0, 0.153);
+  border-radius: 10px;
+  padding: 0.8rem var(--padding-x);
+  width: fit-content;
+  padding-right: calc(var(--padding-x) - var(--letter-spacing));
+  cursor: pointer;
+
+  margin-top: 0.5rem;
+}
+
+.wallet_card {
+  box-shadow: 0px 3px 100px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 1rem 1.5rem;
+  width: fit-content;
+}
+
+.wallet_card h4 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  padding-bottom: 0.2rem;
+}
+
+.wallet_card span {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.friends_container {
+  position: relative;
+}
+
+.friends_data {
+  border-radius: 20px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 2rem;
+  overflow-x: scroll;
+}
+
+.friends_data::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 200px;
+  background: linear-gradient(270deg, #0000004e 0%, rgba(0, 0, 0, 0) 42.79%);
+  border-radius: 20px;
+}
+
+.friends ::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  background: linear-gradient(270deg, #800080 0%, #ff864c 100%);
+  border-radius: 20px;
+  padding: 1.5rem 1.5rem;
+  color: white;
+  width: 400px;
+  flex: none;
+  position: relative;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.heading h4 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: white;
+}
+
+.heading span {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.card h5 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  margin-top: 0.8rem;
+  margin-bottom: 0.6rem;
+}
+
+.card ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  height: 76px;
+  overflow-y: hidden;
+  padding: 0 0.3rem;
+  margin-bottom: 1.2rem;
+}
+
+.card li {
+  border: 2px solid #eeaeae;
+  padding: 0.2rem 0.5rem;
+  border-radius: 100px;
+  height: fit-content;
+}
+
+.refer_amount span {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin-right: 1rem;
+}
+
+.refer_amount span + span {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.links {
+  margin: 4rem 0;
+}
+
+.over::after {
+  content: "";
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #eeaeae;
+  width: 5px;
+  height: 25px;
+  border-radius: 100px;
+}
+
+.back_link {
+  display: none;
+  margin-bottom: 2rem;
+}
+
+.back_link svg {
+  transform: translateY(25%);
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 830px) {
+  .back_link {
+    display: block;
+  }
+
+  .friends_container {
+    overflow: visible;
+  }
+
+  .friends_data {
+    flex-direction: column;
+    overflow: visible;
+  }
+
+  .friends_data::after {
+    display: none;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .code {
+    font-size: 16px;
+  }
+
+  .wallet_card h4 {
+    font-size: 14px;
+  }
+}

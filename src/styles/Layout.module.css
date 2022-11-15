@@ -1,0 +1,85 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 0rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  line-height: 123.5%;
+  font-weight: 500;
+  gap: 2rem;
+}
+
+.links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.links a {
+  color: rgba(128, 0, 128, 0.25);
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.links a:hover {
+  color: rgba(128, 0, 128, 0.8);
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.profile span {
+  padding-left: 0.4rem;
+  padding-right: 0.5rem;
+  color: rgba(128, 0, 128, 1);
+}
+
+.main {
+  max-width: min(1200px, 90%);
+  margin: auto;
+  margin-bottom: 3rem;
+}
+
+.root {
+  padding: 0 6rem;
+}
+
+@media (max-width: 830px) {
+  .main {
+    max-width: none;
+  }
+
+  .root {
+    padding: 0 6%;
+    padding-top: 2rem;
+  }
+
+  .links {
+    display: none;
+  }
+
+  .profile {
+    background-color: #800080;
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+  }
+  .profile span {
+    color: white;
+  }
+  .profile img {
+    display: none;
+  }
+  .profile svg path {
+    fill: white;
+  }
+}
