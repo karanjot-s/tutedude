@@ -7,14 +7,7 @@ import DiscountIcon from "../assets/icons/discount.svg";
 import RupeeIcon from "../assets/icons/rupee.svg";
 import styles from "../styles/Refer.module.css";
 
-const Refer = () => {
-  const stats = {
-    earnings: 2500,
-    referals: 7,
-    balance: 500,
-  };
-
-  const referralCode = "EDH54";
+const Refer = ({data}) => {
 
   const working = [
     {
@@ -51,15 +44,15 @@ const Refer = () => {
           <div className={styles.stats}>
             <div>
               <span>Referral Earning</span>
-              <span>&#x20b9; {stats.earnings}</span>
+              <span>&#x20b9; {data.referralEarnings}</span>
             </div>
             <div>
               <span>Total Referrals</span>
-              <span>{stats.referals}</span>
+              <span>{data.referralNumber}</span>
             </div>
             <div>
               <span>Wallet Balance</span>
-              <span>&#x20b9; {stats.balance}</span>
+              <span>&#x20b9; {data.walletBalance}</span>
             </div>
           </div>
           <button>Withdraw Balance</button>
@@ -68,11 +61,11 @@ const Refer = () => {
           <h3>Your Referral Code</h3>
           <div
             onClick={() => {
-              navigator.clipboard.writeText(referralCode);
+              navigator.clipboard.writeText(data.code);
               window.alert("Referral code copied");
             }}
           >
-            {referralCode}
+            {data.code}
           </div>
         </div>
       </div>

@@ -3,11 +3,10 @@ import { Outlet } from "react-router";
 import { Link } from "react-router-dom";
 import Logo from "../assets/logo.png";
 import ProfileIcon from "../assets/icons/profile.svg";
-import ArrowIcon from "../assets/icons/arrow.svg";
 import styles from "../styles/Layout.module.css";
 import Breadcrumbs from "./Breadcrumbs";
 
-const Layout = () => {
+const Layout = ({studentName}) => {
   const crumbs = [
     {
       link: "/",
@@ -34,7 +33,7 @@ const Layout = () => {
           </div>
           <div className={styles.profile}>
             <img className={styles.profile_icon} src={ProfileIcon} />
-            <span>ProfileName</span>
+            <span>{studentName}</span>
             <svg
               width="12"
               height="8"

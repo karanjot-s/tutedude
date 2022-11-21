@@ -2,78 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styles from "../styles/Referred.module.css";
 
-const Referred = () => {
-  const referralCode = "EDCH54";
-  const balance = 500;
-
-  const friends = [
-    {
-      name: "Dhiraj Saxsena",
-      date: "14 Sep, 2022",
-      courses: ["UI/UX", "Photoshop", "Illustrator", "Python", "MERN", "Java"],
-      referralAmount: 185,
-    },
-    {
-      name: "Subhash Mishra",
-      date: "15 Sep, 2022",
-      courses: [
-        "UI/UX",
-        "Photoshop",
-        "Illustrator",
-        "Python",
-        "MERN",
-        "Java",
-        "C++",
-        "UI/UX",
-        "Photoshop",
-        "Illustrator",
-        "Python",
-        "MERN",
-        "Java",
-        "C++",
-        "UI/UX",
-        "Photoshop",
-        "Illustrator",
-        "Python",
-        "MERN",
-        "Java",
-        "C++",
-        "MERN",
-        "Java",
-      ],
-      referralAmount: 485,
-    },
-    {
-      name: "Prafull Kumar",
-      date: "16 Sep, 2022",
-      courses: [
-        "UI/UX",
-        "Photoshop",
-        "Illustrator",
-        "Python",
-        "MERN",
-        "Java",
-        "C++",
-        "UI/UX",
-        "Photoshop",
-        "Illustrator",
-        "Python",
-        "MERN",
-        "Java",
-        "C++",
-        "UI/UX",
-        "Photoshop",
-        "Illustrator",
-        "Python",
-        "MERN",
-        "Java",
-        "C++",
-        "MERN",
-        "Java",
-      ],
-      referralAmount: 185,
-    },
-  ];
+const Referred = ({data}) => {
 
   return (
     <>
@@ -99,45 +28,47 @@ const Referred = () => {
           <h4>Your Referral Code</h4>
           <div
             onClick={() => {
-              navigator.clipboard.writeText(referralCode);
+              navigator.clipboard.writeText(data.code);
               window.alert("Referral code copied");
             }}
             className={styles.code}
           >
-            {referralCode}
+            {data.code}
           </div>
         </div>
         <div className={styles.wallet_card}>
           <h4>Wallet Balance</h4>
-          <span>&#x20b9;{balance}</span>
+          <span>&#x20b9;{data.walletBalance}</span>
         </div>
       </div>
       <div className={styles.friends}>
         <h3>
-          Friends who enrolled <span>({friends.length})</span>
+          Friends who enrolled <span>({data.enrollers.length})</span>
         </h3>
         <div className={styles.friends_container}>
-          <div className={styles.friends_data}>
-            {friends.map((friend, i) => (
+          <div className={`${styles.friends_data} ${data.enrollers.length < 2 ? "" : (
+            data.enrollers.length === 2 ? styles.friends_2 : styles.friends_many
+          )}`}>
+            {data.enrollers.map((enroller, i) => (
               <div
                 key={i}
                 className={`${styles.card} ${
-                  friend.courses.length > 6 ? styles.over : ""
+                  enroller.courses.length > 6 ? styles.over : ""
                 }`}
               >
                 <div className={styles.heading}>
-                  <h4>{friend.name}</h4>
-                  <span>{friend.date}</span>
+                  <h4>{enroller.studentName}</h4>
+                  <span>{enroller.enrolledDate}</span>
                 </div>
-                <h5>Coursed Enrolled({friend.courses.length})</h5>
+                <h5>Coursed Enrolled({enroller.courses.length})</h5>
                 <ul>
-                  {friend.courses.map((course, i) => (
-                    <li key={i}>{course}</li>
+                  {enroller.courses.map((course, i) => (
+                    <li key={i}>{course.name}</li>
                   ))}
                 </ul>
                 <div className={styles.refer_amount}>
                   <span>Referral Amount</span>
-                  <span>&#x20b9;{friend.referralAmount}</span>
+                  <span>&#x20b9;{enroller.referralAmount}</span>
                 </div>
               </div>
             ))}

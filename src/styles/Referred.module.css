@@ -68,7 +68,7 @@
   overflow-x: scroll;
 }
 
-.friends_data::after {
+/* .friends_data::after {
   content: "";
   position: absolute;
   top: 0;
@@ -77,6 +77,29 @@
   width: 200px;
   background: linear-gradient(270deg, #0000004e 0%, rgba(0, 0, 0, 0) 42.79%);
   border-radius: 20px;
+} */
+.friends_many::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 200px;
+  background: linear-gradient(270deg, #0000004e 0%, rgba(0, 0, 0, 0) 42.79%);
+  border-radius: 20px;
+}
+
+@media (max-width: 1115px) {
+  .friends_2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 200px;
+    background: linear-gradient(270deg, #0000004e 0%, rgba(0, 0, 0, 0) 42.79%);
+    border-radius: 20px;
+  }
 }
 
 .friends ::-webkit-scrollbar {
