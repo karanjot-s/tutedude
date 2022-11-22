@@ -1,8 +1,8 @@
 import React from "react";
 import { Outlet } from "react-router";
 import { Link } from "react-router-dom";
-import Logo from "../assets/logo.png";
-import ProfileIcon from "../assets/icons/profile.svg";
+// import Logo from "../assets/logo.png";
+// import ProfileIcon from "../assets/icons/profile.svg";
 import styles from "../styles/Layout.module.css";
 import Breadcrumbs from "./Breadcrumbs";
 
@@ -25,14 +25,14 @@ const Layout = ({studentName}) => {
   return (
     <div className={styles.root}>
       <nav className={styles.navbar}>
-        <img className={styles.logo} src={Logo} />
+        <img className={styles.logo} src={"/assets/logo.png"} alt="TuteDude" />
         <div className={styles.nav}>
           <div className={styles.links}>
             <Link to="">My Assignment</Link>
             <Link to="">Chat with Mentor</Link>
           </div>
           <div className={styles.profile}>
-            <img className={styles.profile_icon} src={ProfileIcon} />
+            <img className={styles.profile_icon} src={"/assets/icons/profile.svg"} alt="" />
             <span>{studentName}</span>
             <svg
               width="12"

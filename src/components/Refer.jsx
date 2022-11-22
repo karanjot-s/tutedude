@@ -1,10 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import InviteIcon from "../assets/icons/invite.svg";
-import WalletIcon from "../assets/icons/wallet.svg";
-import CouponIcon from "../assets/icons/coupon.svg";
-import DiscountIcon from "../assets/icons/discount.svg";
-import RupeeIcon from "../assets/icons/rupee.svg";
 import styles from "../styles/Refer.module.css";
 
 const Refer = ({data}) => {
@@ -13,27 +8,27 @@ const Refer = ({data}) => {
     {
       title: "Invite your Friends",
       text: "Share the link tutedude.com with your friends",
-      icon: InviteIcon,
+      icon: "/assets/icons/invite.svg",
     },
     {
       title: "Friend purchases any course",
       text: "Using your REFERRAL CODE in the payments page",
-      icon: WalletIcon,
+      icon: "/assets/icons/wallet.svg",
     },
     {
       title: "You get ₹ 200 as referral money",
       text: "On total purchase the friend makes, into your wallet",
-      icon: CouponIcon,
+      icon: "/assets/icons/coupon.svg",
     },
     {
       title: "Your Friend gets ₹ 200 Off",
       text: "On his overall fee on successful purchase using your referral code",
-      icon: DiscountIcon,
+      icon: "/assets/icons/discount.svg",
     },
     {
       title: "Transfer money from wallet",
       text: "When the wallet balance reaches ₹200 or more, you can withdraw it",
-      icon: RupeeIcon,
+      icon: "/assets/icons/rupee.svg",
     },
   ];
 
@@ -75,7 +70,7 @@ const Refer = ({data}) => {
           {working.map((item, i) => (
             <div key={i} className={styles.question}>
               <span className={styles.icon}>
-                <img src={item.icon} />
+                <img src={item.icon} alt="" />
               </span>
               <div>
                 <h4>{item.title}</h4>
