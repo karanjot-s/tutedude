@@ -66,9 +66,9 @@ function App() {
       router={createBrowserRouter(
         createRoutesFromElements(
           <Route path="/" element={<Layout studentName={data.studentName} />}>
-            <Route path="" element={<Home />} />
+            {/* <Route path="" element={<Home />} /> */}
             <Route
-              path="/refer"
+              path="/"
               element={
                 <Refer
                   data={{

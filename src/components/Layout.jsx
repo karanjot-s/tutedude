@@ -8,13 +8,13 @@ import Breadcrumbs from "./Breadcrumbs";
 
 const Layout = ({studentName}) => {
   const crumbs = [
+    // {
+    //   link: "/",
+    //   text: "UI/UX",
+    // },
     {
       link: "/",
-      text: "UI/UX",
-    },
-    {
-      link: "/refer",
-      text: "Refer & Earn",
+      text: "UI/UX > Refer & Earn",
     },
     {
       link: "/refered",
