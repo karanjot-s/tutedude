@@ -4,7 +4,7 @@ a.disabled {
 
 .crumbs {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   list-style: none;
   gap: 8px;
