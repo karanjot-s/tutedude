@@ -61,7 +61,7 @@
   padding: 1rem var(--padding-x);
   position: relative;
   letter-spacing: var(--letter-spacing);
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   text-align: center;
   padding-right: calc(var(--padding-x) - var(--letter-spacing));
 

@@ -8,14 +8,15 @@ import {
 } from "react-router-dom";
 import Refer from "./components/Refer";
 import Layout from "./components/Layout";
-import Home from "./components/Home";
 import Referred from "./components/Refered";
 import { useEffect, useState } from "react";
+// import Home from "./components/Home";
 
 function App() {
   const [data, setData] = useState();
 
   useEffect(() => {
+    /*
     const backendData = {
       _id: 6544276768878,
       studentName: "Shivam",
@@ -57,8 +58,19 @@ function App() {
         },
       ],
     };
+    */
 
-    setData(backendData);
+    // setData(backendData);
+
+    fetch(
+      "https://coupon-tutedude.herokuapp.com/dashboard?student_id=637d982f2934c8ee050e50dd"
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        // console.log(data.dashboard);
+        setData(data.dashboard);
+      })
+      .catch((err) => console.log(err));
   }, []);
 
   return data ? (

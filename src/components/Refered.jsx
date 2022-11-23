@@ -3,6 +3,12 @@ import { Link } from "react-router-dom";
 import styles from "../styles/Referred.module.css";
 
 const Referred = ({data}) => {
+  
+  const getFormatedDate = (dateString) => {
+    const d = new Date(dateString)
+    
+    return `${d.getDate()}-${d.getMonth()}-${d.getFullYear()}`
+  }
 
   return (
     <>
@@ -58,7 +64,7 @@ const Referred = ({data}) => {
               >
                 <div className={styles.heading}>
                   <h4>{enroller.studentName}</h4>
-                  <span>{enroller.enrolledDate}</span>
+                  <span>{getFormatedDate(enroller.enrolledDate)}</span>
                 </div>
                 <h5>Coursed Enrolled({enroller.courses.length})</h5>
                 <ul>
