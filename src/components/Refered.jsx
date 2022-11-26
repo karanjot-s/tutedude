@@ -13,7 +13,7 @@ const Referred = ({data}) => {
   return (
     <>
       <div className={styles.back_link}>
-        <Link to="/refer">
+        <Link to="/">
           <svg
             width="16"
             height="16"
