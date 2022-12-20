@@ -7,7 +7,7 @@ const Referred = ({data}) => {
   const getFormatedDate = (dateString) => {
     const d = new Date(dateString)
     
-    return `${d.getDate()}-${d.getMonth()}-${d.getFullYear()}`
+    return isNaN ? dateString : `${d.getDate()}-${d.getMonth()}-${d.getFullYear()}`
   }
 
   return (
@@ -64,12 +64,12 @@ const Referred = ({data}) => {
               >
                 <div className={styles.heading}>
                   <h4>{enroller.studentName}</h4>
-                  <span>{getFormatedDate(enroller.enrolledDate)}</span>
+                  <span>{getFormatedDate(enroller.date_time)}</span>
                 </div>
                 <h5>Coursed Enrolled({enroller.courses.length})</h5>
                 <ul>
                   {enroller.courses.map((course, i) => (
-                    <li key={i}>{course.name}</li>
+                    <li key={i}>{course}</li>
                   ))}
                 </ul>
                 <div className={styles.refer_amount}>
