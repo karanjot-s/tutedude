@@ -10,7 +10,7 @@ const Login = ({ onSubmit, loading }) => {
     <form
       onSubmit={(e) => {
         e.preventDefault();
-        onSubmit(email);
+        onSubmit(email, password);
       }}
       className={styles.login_form}
     >

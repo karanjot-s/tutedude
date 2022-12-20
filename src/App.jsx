@@ -62,7 +62,7 @@ function App() {
 
   const onLogin = (email, password) => {
     fetch(
-      "http://ec2-65-1-163-139.ap-south-1.compute.amazonaws.com:3001/dashboard",
+      "http://ec2-65-1-163-139.ap-south-1.compute.amazonaws.com:3001/login",
       {
         method: "POST",
         headers: {
@@ -76,9 +76,9 @@ function App() {
     )
       .then((res) => res.json())
       .then((data) => {
-        // console.log(data.dashboard);
+        // console.log(data);
 
-        if (data.success) {
+        if (data.success === "true" || data.success === true) {
           setData(data.dashboard);
         } else {
           window.alert("Invalid Email or Password");
