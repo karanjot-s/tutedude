@@ -10,7 +10,7 @@ const Login = ({ onSubmit, loading }) => {
     <form
       onSubmit={(e) => {
         e.preventDefault();
-        onSubmit(email, password);
+        onSubmit(email.trim(), password.trim());
       }}
       className={styles.login_form}
     >
