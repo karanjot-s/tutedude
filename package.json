@@ -14,6 +14,7 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
+    "start2": "concurrently \"cross-env PORT=80 react-scripts start\" \"cross-env PORT=443 react-scripts start\"",
     "start": "cross-env PORT=80 HTTPS=true react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -38,6 +39,7 @@
     ]
   },
   "devDependencies": {
+    "concurrently": "^7.6.0",
     "cross-env": "^7.0.3"
   }
 }
